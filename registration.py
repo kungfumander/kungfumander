@@ -19,6 +19,8 @@ def save_user_info():
 		
 			_hashed_password = generate_password_hash(password)
 			
+   # Database information, default values
+   
 			sql = "INSERT INTO user(name, password, email) VALUES(%s, %s, %s)"
 			data = (name, _hashed_password, email)
 			conn = mysql.connect()
